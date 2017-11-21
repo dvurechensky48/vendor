@@ -1,0 +1,50 @@
+{
+  "name": "orchid/settings",
+  "description": "Settings for The Laravel Framework.",
+  "keywords": ["laravel", "settings", "database", "json", "key", "value"],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://theorchid.github.io/",
+  "support": {
+    "issues": "https://github.com/theOrchid/Settings/issues",
+    "source": "https://github.com/theOrchid/Settings"
+  },
+  "authors": [
+    {
+      "name": "Alexandr Chernyaev",
+      "email": "bliz48rus@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "laravel/framework": "~5.4"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Orchid\\": "src/Orchid"
+    },
+    "files": [
+      "src/Orchid/Setting/helpers.php"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Orchid\\Setting\\Providers\\SettingServiceProvider"
+      ],
+      "aliases": {
+        "Setting": "Orchid\\Setting\\Facades\\Setting"
+      }
+    }
+  },
+  "minimum-stability": "alpha",
+  "prefer-stable": true
+}

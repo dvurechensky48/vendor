@@ -1,0 +1,56 @@
+{
+  "name": "orchid/cms",
+  "description": "Laravel CMS for website.",
+  "keywords": ["framework", "laravel", "orchid", "crud", "cms", "log", "menu", "scaffold", "settings", "website", "platform"],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "http://orchid.software",
+  "support": {
+    "issues": "https://github.com/theOrchid/Platform/issues",
+    "source": "https://github.com/theOrchid/Platform"
+  },
+  "authors": [
+    {
+      "name": "Alexandr Chernyaev",
+      "email": "bliz48rus@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "orchid/platform": "^1.0",
+    "orchid/settings": "^2.0",
+    "orchid/log": "^1.0",
+    "orchid/monitor": "^1.0",
+    "intervention/image": "^2.3",
+    "cartalyst/tags": "^5.0",
+    "cviebrock/eloquent-sluggable": "^4.2",
+    "spatie/laravel-backup": "^5.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "~0.9.4",
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Orchid\\CMS\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Orchid\\CMS\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Orchid\\CMS\\Providers\\FoundationServiceProvider"
+      ]
+    }
+  },
+  "suggest": {
+    "orchid/socket": "Laravel library for asynchronously serving WebSockets."
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": false
+}

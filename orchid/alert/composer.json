@@ -1,0 +1,48 @@
+{
+    "name": "orchid/alert",
+    "description": "Alert package for Orchid CMS",
+    "type": "library",
+    "keywords": ["orchid", "cms", "notification", "alert", "platform"],
+    "license": "MIT",
+    "homepage": "https://theorchid.github.io/",
+    "support": {
+        "issues": "https://github.com/theOrchid/Alert/issues",
+        "source": "https://github.com/theOrchid/Alert"
+    },
+    "authors": [
+        {
+            "name": "Alexandr Chernyaev",
+            "email": "bliz48rus@gmail.com"
+        },
+        {
+            "name": "David Mjomba",
+            "email": "smodavprivate@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "files": [
+            "src/Orchid/Alert/Support/helpers.php"
+        ],
+        "psr-4": {
+            "Orchid\\": "src/Orchid"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Orchid\\Alert\\Laravel\\AlertServiceProvider"
+            ],
+            "aliases": {
+                "Alert": "Orchid\\Alert\\Facades\\Alert"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
